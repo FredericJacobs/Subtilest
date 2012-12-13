@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B68BAC4C167A58A60071F34D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68BAC4B167A58A60071F34D /* Cocoa.framework */; };
+		B68BAC56167A58A60071F34D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC54167A58A60071F34D /* InfoPlist.strings */; };
+		B68BAC58167A58A60071F34D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B68BAC57167A58A60071F34D /* main.m */; };
+		B68BAC5C167A58A60071F34D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC5A167A58A60071F34D /* Credits.rtf */; };
+		B68BAC5F167A58A60071F34D /* SUBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B68BAC5E167A58A60071F34D /* SUBAppDelegate.m */; };
+		B68BAC62167A58A60071F34D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC60167A58A60071F34D /* MainMenu.xib */; };
+		B68BAC6E167A5AFE0071F34D /* SUBHashAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = B68BAC6D167A5AFE0071F34D /* SUBHashAlgorithm.m */; };
+		B68BAC81167A62A40071F34D /* XMLRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68BAC7A167A627B0071F34D /* XMLRPC.framework */; };
+		B68BAC83167A63560071F34D /* XMLRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68BAC82167A63560071F34D /* XMLRPC.framework */; };
+		B68BAC9D167A63BB0071F34D /* NSData+Base64.h in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC84167A63BB0071F34D /* NSData+Base64.h */; };
+		B68BAC9E167A63BB0071F34D /* NSData+Base64.m in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC85167A63BB0071F34D /* NSData+Base64.m */; };
+		B68BAC9F167A63BB0071F34D /* NSStringAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC86167A63BB0071F34D /* NSStringAdditions.h */; };
+		B68BACA0167A63BB0071F34D /* NSStringAdditions.m in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC87167A63BB0071F34D /* NSStringAdditions.m */; };
+		B68BACA1167A63BB0071F34D /* XMLRPCConnectionDelegate.h in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC89167A63BB0071F34D /* XMLRPCConnectionDelegate.h */; };
+		B68BACA2167A63BB0071F34D /* XMLRPCEncoder.h in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC8B167A63BB0071F34D /* XMLRPCEncoder.h */; };
+		B68BACA3167A63BB0071F34D /* XMLRPC.h in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC8D167A63BB0071F34D /* XMLRPC.h */; };
+		B68BACA4167A63BB0071F34D /* XMLRPCConnection.h in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC8E167A63BB0071F34D /* XMLRPCConnection.h */; };
+		B68BACA5167A63BB0071F34D /* XMLRPCConnection.m in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC8F167A63BB0071F34D /* XMLRPCConnection.m */; };
+		B68BACA6167A63BB0071F34D /* XMLRPCConnectionManager.h in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC90167A63BB0071F34D /* XMLRPCConnectionManager.h */; };
+		B68BACA7167A63BB0071F34D /* XMLRPCConnectionManager.m in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC91167A63BB0071F34D /* XMLRPCConnectionManager.m */; };
+		B68BACA8167A63BB0071F34D /* XMLRPCDefaultEncoder.h in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC92167A63BB0071F34D /* XMLRPCDefaultEncoder.h */; };
+		B68BACA9167A63BB0071F34D /* XMLRPCDefaultEncoder.m in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC93167A63BB0071F34D /* XMLRPCDefaultEncoder.m */; };
+		B68BACAA167A63BB0071F34D /* XMLRPCEventBasedParser.h in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC94167A63BB0071F34D /* XMLRPCEventBasedParser.h */; };
+		B68BACAB167A63BB0071F34D /* XMLRPCEventBasedParser.m in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC95167A63BB0071F34D /* XMLRPCEventBasedParser.m */; };
+		B68BACAC167A63BB0071F34D /* XMLRPCEventBasedParserDelegate.h in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC96167A63BB0071F34D /* XMLRPCEventBasedParserDelegate.h */; };
+		B68BACAD167A63BB0071F34D /* XMLRPCEventBasedParserDelegate.m in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC97167A63BB0071F34D /* XMLRPCEventBasedParserDelegate.m */; };
+		B68BACAE167A63BB0071F34D /* XMLRPCRequest.h in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC98167A63BB0071F34D /* XMLRPCRequest.h */; };
+		B68BACAF167A63BB0071F34D /* XMLRPCRequest.m in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC99167A63BB0071F34D /* XMLRPCRequest.m */; };
+		B68BACB0167A63BB0071F34D /* XMLRPCResponse.h in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC9A167A63BB0071F34D /* XMLRPCResponse.h */; };
+		B68BACB1167A63BB0071F34D /* XMLRPCResponse.m in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC9B167A63BB0071F34D /* XMLRPCResponse.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B68BAC79167A627B0071F34D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B68BAC70167A627B0071F34D /* XMLRPC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = XMLRPC;
+		};
+		B68BAC7B167A627B0071F34D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B68BAC70167A627B0071F34D /* XMLRPC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 903B0DB612F7574800BD6E09;
+			remoteInfo = libXMLRPC;
+		};
+		B68BAC7D167A627B0071F34D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B68BAC70167A627B0071F34D /* XMLRPC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0799AF030F6721FF00B71B22;
+			remoteInfo = XMLRPCUnitTests;
+		};
+		B68BAC7F167A629E0071F34D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B68BAC70167A627B0071F34D /* XMLRPC.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = XMLRPC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B68BAC47167A58A60071F34D /* Subtilest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subtilest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B68BAC4B167A58A60071F34D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B68BAC4E167A58A60071F34D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B68BAC4F167A58A60071F34D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B68BAC50167A58A60071F34D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B68BAC53167A58A60071F34D /* Subtilest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Subtilest-Info.plist"; sourceTree = "<group>"; };
+		B68BAC55167A58A60071F34D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B68BAC57167A58A60071F34D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B68BAC59167A58A60071F34D /* Subtilest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Subtilest-Prefix.pch"; sourceTree = "<group>"; };
+		B68BAC5B167A58A60071F34D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		B68BAC5D167A58A60071F34D /* SUBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUBAppDelegate.h; sourceTree = "<group>"; };
+		B68BAC5E167A58A60071F34D /* SUBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUBAppDelegate.m; sourceTree = "<group>"; };
+		B68BAC61167A58A60071F34D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B68BAC6C167A5AFE0071F34D /* SUBHashAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBHashAlgorithm.h; sourceTree = "<group>"; };
+		B68BAC6D167A5AFE0071F34D /* SUBHashAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBHashAlgorithm.m; sourceTree = "<group>"; };
+		B68BAC6F167A5C3C0071F34D /* Subtilest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Subtilest.entitlements; sourceTree = "<group>"; };
+		B68BAC70167A627B0071F34D /* XMLRPC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XMLRPC.xcodeproj; path = Libraries/XMLRPC/XMLRPC.xcodeproj; sourceTree = "<group>"; };
+		B68BAC82167A63560071F34D /* XMLRPC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XMLRPC.framework; path = "../../../Library/Developer/Xcode/DerivedData/Subtilest-hggyrjikqmiwvhcrepdbfipbmgyr/Build/Products/Release/XMLRPC.framework"; sourceTree = "<group>"; };
+		B68BAC84167A63BB0071F34D /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		B68BAC85167A63BB0071F34D /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		B68BAC86167A63BB0071F34D /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		B68BAC87167A63BB0071F34D /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		B68BAC89167A63BB0071F34D /* XMLRPCConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCConnectionDelegate.h; sourceTree = "<group>"; };
+		B68BAC8B167A63BB0071F34D /* XMLRPCEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = file; path = XMLRPCEncoder.h; sourceTree = "<group>"; };
+		B68BAC8D167A63BB0071F34D /* XMLRPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPC.h; sourceTree = "<group>"; };
+		B68BAC8E167A63BB0071F34D /* XMLRPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCConnection.h; sourceTree = "<group>"; };
+		B68BAC8F167A63BB0071F34D /* XMLRPCConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCConnection.m; sourceTree = "<group>"; };
+		B68BAC90167A63BB0071F34D /* XMLRPCConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCConnectionManager.h; sourceTree = "<group>"; };
+		B68BAC91167A63BB0071F34D /* XMLRPCConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCConnectionManager.m; sourceTree = "<group>"; };
+		B68BAC92167A63BB0071F34D /* XMLRPCDefaultEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCDefaultEncoder.h; sourceTree = "<group>"; };
+		B68BAC93167A63BB0071F34D /* XMLRPCDefaultEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCDefaultEncoder.m; sourceTree = "<group>"; };
+		B68BAC94167A63BB0071F34D /* XMLRPCEventBasedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCEventBasedParser.h; sourceTree = "<group>"; };
+		B68BAC95167A63BB0071F34D /* XMLRPCEventBasedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCEventBasedParser.m; sourceTree = "<group>"; };
+		B68BAC96167A63BB0071F34D /* XMLRPCEventBasedParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCEventBasedParserDelegate.h; sourceTree = "<group>"; };
+		B68BAC97167A63BB0071F34D /* XMLRPCEventBasedParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCEventBasedParserDelegate.m; sourceTree = "<group>"; };
+		B68BAC98167A63BB0071F34D /* XMLRPCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCRequest.h; sourceTree = "<group>"; };
+		B68BAC99167A63BB0071F34D /* XMLRPCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCRequest.m; sourceTree = "<group>"; };
+		B68BAC9A167A63BB0071F34D /* XMLRPCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCResponse.h; sourceTree = "<group>"; };
+		B68BAC9B167A63BB0071F34D /* XMLRPCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = XMLRPCResponse.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B68BAC44167A58A60071F34D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68BAC81167A62A40071F34D /* XMLRPC.framework in Frameworks */,
+				B68BAC4C167A58A60071F34D /* Cocoa.framework in Frameworks */,
+				B68BAC83167A63560071F34D /* XMLRPC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B68BAC3C167A58A60071F34D = {
+			isa = PBXGroup;
+			children = (
+				B68BAC70167A627B0071F34D /* XMLRPC.xcodeproj */,
+				B68BAC51167A58A60071F34D /* Subtilest */,
+				B68BAC4A167A58A60071F34D /* Frameworks */,
+				B68BAC48167A58A60071F34D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B68BAC48167A58A60071F34D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B68BAC47167A58A60071F34D /* Subtilest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B68BAC4A167A58A60071F34D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B68BAC82167A63560071F34D /* XMLRPC.framework */,
+				B68BAC4B167A58A60071F34D /* Cocoa.framework */,
+				B68BAC4D167A58A60071F34D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B68BAC4D167A58A60071F34D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B68BAC4E167A58A60071F34D /* AppKit.framework */,
+				B68BAC4F167A58A60071F34D /* CoreData.framework */,
+				B68BAC50167A58A60071F34D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B68BAC51167A58A60071F34D /* Subtilest */ = {
+			isa = PBXGroup;
+			children = (
+				B68BAC9C167A63BB0071F34D /* XMLRPC Classes */,
+				B68BAC6F167A5C3C0071F34D /* Subtilest.entitlements */,
+				B68BAC5D167A58A60071F34D /* SUBAppDelegate.h */,
+				B68BAC5E167A58A60071F34D /* SUBAppDelegate.m */,
+				B68BAC6C167A5AFE0071F34D /* SUBHashAlgorithm.h */,
+				B68BAC6D167A5AFE0071F34D /* SUBHashAlgorithm.m */,
+				B68BAC60167A58A60071F34D /* MainMenu.xib */,
+				B68BAC52167A58A60071F34D /* Supporting Files */,
+			);
+			path = Subtilest;
+			sourceTree = "<group>";
+		};
+		B68BAC52167A58A60071F34D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B68BAC53167A58A60071F34D /* Subtilest-Info.plist */,
+				B68BAC54167A58A60071F34D /* InfoPlist.strings */,
+				B68BAC57167A58A60071F34D /* main.m */,
+				B68BAC59167A58A60071F34D /* Subtilest-Prefix.pch */,
+				B68BAC5A167A58A60071F34D /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B68BAC71167A627B0071F34D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B68BAC7A167A627B0071F34D /* XMLRPC.framework */,
+				B68BAC7C167A627B0071F34D /* libXMLRPC.a */,
+				B68BAC7E167A627B0071F34D /* XMLRPCUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B68BAC88167A63BB0071F34D /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				B68BAC84167A63BB0071F34D /* NSData+Base64.h */,
+				B68BAC85167A63BB0071F34D /* NSData+Base64.m */,
+				B68BAC86167A63BB0071F34D /* NSStringAdditions.h */,
+				B68BAC87167A63BB0071F34D /* NSStringAdditions.m */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
+		B68BAC8A167A63BB0071F34D /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				B68BAC89167A63BB0071F34D /* XMLRPCConnectionDelegate.h */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		B68BAC8C167A63BB0071F34D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B68BAC8B167A63BB0071F34D /* XMLRPCEncoder.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		B68BAC9C167A63BB0071F34D /* XMLRPC Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B68BAC88167A63BB0071F34D /* Additions */,
+				B68BAC8A167A63BB0071F34D /* Delegates */,
+				B68BAC8C167A63BB0071F34D /* Protocols */,
+				B68BAC8D167A63BB0071F34D /* XMLRPC.h */,
+				B68BAC8E167A63BB0071F34D /* XMLRPCConnection.h */,
+				B68BAC8F167A63BB0071F34D /* XMLRPCConnection.m */,
+				B68BAC90167A63BB0071F34D /* XMLRPCConnectionManager.h */,
+				B68BAC91167A63BB0071F34D /* XMLRPCConnectionManager.m */,
+				B68BAC92167A63BB0071F34D /* XMLRPCDefaultEncoder.h */,
+				B68BAC93167A63BB0071F34D /* XMLRPCDefaultEncoder.m */,
+				B68BAC94167A63BB0071F34D /* XMLRPCEventBasedParser.h */,
+				B68BAC95167A63BB0071F34D /* XMLRPCEventBasedParser.m */,
+				B68BAC96167A63BB0071F34D /* XMLRPCEventBasedParserDelegate.h */,
+				B68BAC97167A63BB0071F34D /* XMLRPCEventBasedParserDelegate.m */,
+				B68BAC98167A63BB0071F34D /* XMLRPCRequest.h */,
+				B68BAC99167A63BB0071F34D /* XMLRPCRequest.m */,
+				B68BAC9A167A63BB0071F34D /* XMLRPCResponse.h */,
+				B68BAC9B167A63BB0071F34D /* XMLRPCResponse.m */,
+			);
+			name = "XMLRPC Classes";
+			path = ../Libraries/XMLRPC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B68BAC46167A58A60071F34D /* Subtilest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B68BAC65167A58A60071F34D /* Build configuration list for PBXNativeTarget "Subtilest" */;
+			buildPhases = (
+				B68BAC43167A58A60071F34D /* Sources */,
+				B68BAC44167A58A60071F34D /* Frameworks */,
+				B68BAC45167A58A60071F34D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B68BAC80167A629E0071F34D /* PBXTargetDependency */,
+			);
+			name = Subtilest;
+			productName = Subtilest;
+			productReference = B68BAC47167A58A60071F34D /* Subtilest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B68BAC3E167A58A60071F34D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SUB;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Frederic Jacobs";
+			};
+			buildConfigurationList = B68BAC41167A58A60071F34D /* Build configuration list for PBXProject "Subtilest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B68BAC3C167A58A60071F34D;
+			productRefGroup = B68BAC48167A58A60071F34D /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B68BAC71167A627B0071F34D /* Products */;
+					ProjectRef = B68BAC70167A627B0071F34D /* XMLRPC.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B68BAC46167A58A60071F34D /* Subtilest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B68BAC7A167A627B0071F34D /* XMLRPC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XMLRPC.framework;
+			remoteRef = B68BAC79167A627B0071F34D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B68BAC7C167A627B0071F34D /* libXMLRPC.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libXMLRPC.a;
+			remoteRef = B68BAC7B167A627B0071F34D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B68BAC7E167A627B0071F34D /* XMLRPCUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XMLRPCUnitTests.octest;
+			remoteRef = B68BAC7D167A627B0071F34D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B68BAC45167A58A60071F34D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68BAC56167A58A60071F34D /* InfoPlist.strings in Resources */,
+				B68BAC5C167A58A60071F34D /* Credits.rtf in Resources */,
+				B68BAC62167A58A60071F34D /* MainMenu.xib in Resources */,
+				B68BAC9D167A63BB0071F34D /* NSData+Base64.h in Resources */,
+				B68BAC9E167A63BB0071F34D /* NSData+Base64.m in Resources */,
+				B68BAC9F167A63BB0071F34D /* NSStringAdditions.h in Resources */,
+				B68BACA0167A63BB0071F34D /* NSStringAdditions.m in Resources */,
+				B68BACA1167A63BB0071F34D /* XMLRPCConnectionDelegate.h in Resources */,
+				B68BACA2167A63BB0071F34D /* XMLRPCEncoder.h in Resources */,
+				B68BACA3167A63BB0071F34D /* XMLRPC.h in Resources */,
+				B68BACA4167A63BB0071F34D /* XMLRPCConnection.h in Resources */,
+				B68BACA5167A63BB0071F34D /* XMLRPCConnection.m in Resources */,
+				B68BACA6167A63BB0071F34D /* XMLRPCConnectionManager.h in Resources */,
+				B68BACA7167A63BB0071F34D /* XMLRPCConnectionManager.m in Resources */,
+				B68BACA8167A63BB0071F34D /* XMLRPCDefaultEncoder.h in Resources */,
+				B68BACA9167A63BB0071F34D /* XMLRPCDefaultEncoder.m in Resources */,
+				B68BACAA167A63BB0071F34D /* XMLRPCEventBasedParser.h in Resources */,
+				B68BACAB167A63BB0071F34D /* XMLRPCEventBasedParser.m in Resources */,
+				B68BACAC167A63BB0071F34D /* XMLRPCEventBasedParserDelegate.h in Resources */,
+				B68BACAD167A63BB0071F34D /* XMLRPCEventBasedParserDelegate.m in Resources */,
+				B68BACAE167A63BB0071F34D /* XMLRPCRequest.h in Resources */,
+				B68BACAF167A63BB0071F34D /* XMLRPCRequest.m in Resources */,
+				B68BACB0167A63BB0071F34D /* XMLRPCResponse.h in Resources */,
+				B68BACB1167A63BB0071F34D /* XMLRPCResponse.m in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B68BAC43167A58A60071F34D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68BAC58167A58A60071F34D /* main.m in Sources */,
+				B68BAC5F167A58A60071F34D /* SUBAppDelegate.m in Sources */,
+				B68BAC6E167A5AFE0071F34D /* SUBHashAlgorithm.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B68BAC80167A629E0071F34D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XMLRPC;
+			targetProxy = B68BAC7F167A629E0071F34D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B68BAC54167A58A60071F34D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B68BAC55167A58A60071F34D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B68BAC5A167A58A60071F34D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B68BAC5B167A58A60071F34D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		B68BAC60167A58A60071F34D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B68BAC61167A58A60071F34D /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B68BAC63167A58A60071F34D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B68BAC64167A58A60071F34D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B68BAC66167A58A60071F34D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Subtilest/Subtilest.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Subtilest-hggyrjikqmiwvhcrepdbfipbmgyr/Build/Products/Release\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Subtilest/Subtilest-Prefix.pch";
+				INFOPLIST_FILE = "Subtilest/Subtilest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B68BAC67167A58A60071F34D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Subtilest/Subtilest.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Subtilest-hggyrjikqmiwvhcrepdbfipbmgyr/Build/Products/Release\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Subtilest/Subtilest-Prefix.pch";
+				INFOPLIST_FILE = "Subtilest/Subtilest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B68BAC41167A58A60071F34D /* Build configuration list for PBXProject "Subtilest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B68BAC63167A58A60071F34D /* Debug */,
+				B68BAC64167A58A60071F34D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B68BAC65167A58A60071F34D /* Build configuration list for PBXNativeTarget "Subtilest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B68BAC66167A58A60071F34D /* Debug */,
+				B68BAC67167A58A60071F34D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B68BAC3E167A58A60071F34D /* Project object */;
+}

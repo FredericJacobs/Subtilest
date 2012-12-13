@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B6C9F8C91679FD1D0091A350"
+               BlueprintIdentifier = "B68BAC46167A58A60071F34D"
                BuildableName = "Subtilest.app"
                BlueprintName = "Subtilest"
                ReferencedContainer = "container:Subtilest.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B6C9F8C91679FD1D0091A350"
+            BlueprintIdentifier = "B68BAC46167A58A60071F34D"
             BuildableName = "Subtilest.app"
             BlueprintName = "Subtilest"
             ReferencedContainer = "container:Subtilest.xcodeproj">
@@ -51,7 +51,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B6C9F8C91679FD1D0091A350"
+            BlueprintIdentifier = "B68BAC46167A58A60071F34D"
             BuildableName = "Subtilest.app"
             BlueprintName = "Subtilest"
             ReferencedContainer = "container:Subtilest.xcodeproj">
@@ -69,7 +69,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B6C9F8C91679FD1D0091A350"
+            BlueprintIdentifier = "B68BAC46167A58A60071F34D"
             BuildableName = "Subtilest.app"
             BlueprintName = "Subtilest"
             ReferencedContainer = "container:Subtilest.xcodeproj">
