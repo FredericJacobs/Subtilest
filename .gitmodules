@@ -1,3 +1,0 @@
-[submodule "Subtilest/Libraries/XMLRPC"]
-	path = Subtilest/Libraries/XMLRPC
-	url = git://github.com/corristo/xmlrpc.git
