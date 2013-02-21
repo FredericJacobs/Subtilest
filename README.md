@@ -28,3 +28,6 @@ The question I ask myself now is what's the best way of loading the subtitles th
 
 I wish I could load VLC with the subtitles in a URL scheme but couldn't find any way to do that on the Mac.
 
+## Development
+
+Make sure to always open the Xcode workspace instead of the project file when building the project.

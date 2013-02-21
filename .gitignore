@@ -1,3 +1,4 @@
+# OS X
 .DS_Store
 .DS_Store?
 ._*
@@ -6,6 +7,8 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# Xcode
 *.mode1
 *.mode1v3
 *.mode2v3
@@ -13,3 +16,7 @@ Thumbs.db
 *.perspectivev3
 *.pbxuser
 xcuserdata
+
+# CocoaPads
+Podfile.lock
+Pods/
