@@ -14,6 +14,7 @@
 		B68BAC5F167A58A60071F34D /* SUBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B68BAC5E167A58A60071F34D /* SUBAppDelegate.m */; };
 		B68BAC62167A58A60071F34D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC60167A58A60071F34D /* MainMenu.xib */; };
 		B68BAC6E167A5AFE0071F34D /* SUBHashAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = B68BAC6D167A5AFE0071F34D /* SUBHashAlgorithm.m */; };
+		C0315CBF16D672F7007E3EAD /* SUBDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0315CBE16D672F7007E3EAD /* SUBDropView.m */; };
 		E6A7ED7A7F9B4A6A8B9118E9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 014791EC2218413A991BEC44 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 		B68BAC6C167A5AFE0071F34D /* SUBHashAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBHashAlgorithm.h; sourceTree = "<group>"; };
 		B68BAC6D167A5AFE0071F34D /* SUBHashAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBHashAlgorithm.m; sourceTree = "<group>"; };
 		B68BAC6F167A5C3C0071F34D /* Subtilest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Subtilest.entitlements; sourceTree = "<group>"; };
+		C0315CBD16D672F7007E3EAD /* SUBDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBDropView.h; sourceTree = "<group>"; };
+		C0315CBE16D672F7007E3EAD /* SUBDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBDropView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 		B68BAC51167A58A60071F34D /* Subtilest */ = {
 			isa = PBXGroup;
 			children = (
+				C0315CBD16D672F7007E3EAD /* SUBDropView.h */,
+				C0315CBE16D672F7007E3EAD /* SUBDropView.m */,
 				B68BAC6F167A5C3C0071F34D /* Subtilest.entitlements */,
 				B68BAC5D167A58A60071F34D /* SUBAppDelegate.h */,
 				B68BAC5E167A58A60071F34D /* SUBAppDelegate.m */,
@@ -201,6 +206,7 @@
 				B68BAC58167A58A60071F34D /* main.m in Sources */,
 				B68BAC5F167A58A60071F34D /* SUBAppDelegate.m in Sources */,
 				B68BAC6E167A5AFE0071F34D /* SUBHashAlgorithm.m in Sources */,
+				C0315CBF16D672F7007E3EAD /* SUBDropView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
