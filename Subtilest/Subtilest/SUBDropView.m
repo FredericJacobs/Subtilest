@@ -38,9 +38,11 @@
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
 {
     NSPasteboard *pboard = sender.draggingPasteboard;
-    if([pboard.types containsObject:NSURLPboardType]) {
-        NSURL *fileURL = [NSURL URLFromPasteboard:pboard];
-        NSLog(@"%@", fileURL.absoluteString);
+    if( [pboard.types containsObject:NSURLPboardType] ) {
+        NSLog(@"Dropped file: %@", [NSURL URLFromPasteboard: pboard].absoluteString);
+        if( self.callback ) {
+            self.callback( [NSURL URLFromPasteboard: pboard] );
+        }
     }
     [self setHighlighted: NO];
     return YES;

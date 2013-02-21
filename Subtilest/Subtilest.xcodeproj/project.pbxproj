@@ -109,16 +109,13 @@
 		B68BAC51167A58A60071F34D /* Subtilest */ = {
 			isa = PBXGroup;
 			children = (
-				C0315CBD16D672F7007E3EAD /* SUBDropView.h */,
-				C0315CBE16D672F7007E3EAD /* SUBDropView.m */,
-				C0315CC016D673FA007E3EAD /* SUBMovieDropView.h */,
-				C0315CC116D673FA007E3EAD /* SUBMovieDropView.m */,
 				B68BAC5D167A58A60071F34D /* SUBAppDelegate.h */,
 				B68BAC5E167A58A60071F34D /* SUBAppDelegate.m */,
 				B68BAC6C167A5AFE0071F34D /* SUBHashAlgorithm.h */,
 				B68BAC6D167A5AFE0071F34D /* SUBHashAlgorithm.m */,
 				B68BAC60167A58A60071F34D /* MainMenu.xib */,
 				B68BAC6F167A5C3C0071F34D /* Subtilest.entitlements */,
+				C052B43C16D6DB310041112B /* Views */,
 				C0DFC8D516D684F700577B1D /* Preferences */,
 				B68BAC52167A58A60071F34D /* Supporting Files */,
 				C050CCA716D6CC9B00946582 /* Categories */,
@@ -145,6 +142,17 @@
 				C050CCA516D6CC9600946582 /* NSLocale+SUBLanguagesNames.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		C052B43C16D6DB310041112B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C0315CBD16D672F7007E3EAD /* SUBDropView.h */,
+				C0315CBE16D672F7007E3EAD /* SUBDropView.m */,
+				C0315CC016D673FA007E3EAD /* SUBMovieDropView.h */,
+				C0315CC116D673FA007E3EAD /* SUBMovieDropView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		C0DFC8D516D684F700577B1D /* Preferences */ = {

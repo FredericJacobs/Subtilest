@@ -9,11 +9,14 @@
 
 #import <Cocoa/Cocoa.h>
 
+typedef void (^SUBDropViewCallback)(NSURL *);
+
 @interface SUBDropView : NSView
 {
     BOOL isHighlighted;
 }
 
 @property (assign, setter = setHighlighted:) BOOL isHighlighted;
+@property (strong) SUBDropViewCallback callback;
 
 @end
