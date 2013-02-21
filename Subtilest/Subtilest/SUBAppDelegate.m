@@ -57,4 +57,21 @@
     
 }
 
+- (IBAction)showPreferences:(id)sender
+{
+    if (self.preferencesController == nil) {
+        self.preferencesController = [[SUBPreferencesController alloc] initWithWindowNibName: @"Preferences"];
+    }
+
+    [self.preferencesController showWindow: nil];
+
+     /*NSWindow *prefsWindow = self.preferencesController.window;
+
+    [NSApp beginSheet: prefsWindow
+       modalForWindow: self.window
+        modalDelegate: self
+       didEndSelector: @selector(didEndMySheet:returnCode:contextInfo:)
+          contextInfo: nil];*/
+}
+
 @end

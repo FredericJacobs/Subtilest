@@ -15,6 +15,9 @@
 		B68BAC62167A58A60071F34D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B68BAC60167A58A60071F34D /* MainMenu.xib */; };
 		B68BAC6E167A5AFE0071F34D /* SUBHashAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = B68BAC6D167A5AFE0071F34D /* SUBHashAlgorithm.m */; };
 		C0315CBF16D672F7007E3EAD /* SUBDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0315CBE16D672F7007E3EAD /* SUBDropView.m */; };
+		C0315CC216D673FA007E3EAD /* SUBMovieDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0315CC116D673FA007E3EAD /* SUBMovieDropView.m */; };
+		C0DFC8D216D67CB600577B1D /* SUBPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DFC8D016D67CB600577B1D /* SUBPreferencesController.m */; };
+		C0DFC8D316D67CB600577B1D /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFC8D116D67CB600577B1D /* Preferences.xib */; };
 		E6A7ED7A7F9B4A6A8B9118E9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 014791EC2218413A991BEC44 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,11 @@
 		B68BAC6F167A5C3C0071F34D /* Subtilest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Subtilest.entitlements; sourceTree = "<group>"; };
 		C0315CBD16D672F7007E3EAD /* SUBDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBDropView.h; sourceTree = "<group>"; };
 		C0315CBE16D672F7007E3EAD /* SUBDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBDropView.m; sourceTree = "<group>"; };
+		C0315CC016D673FA007E3EAD /* SUBMovieDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBMovieDropView.h; sourceTree = "<group>"; };
+		C0315CC116D673FA007E3EAD /* SUBMovieDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBMovieDropView.m; sourceTree = "<group>"; };
+		C0DFC8CF16D67CB600577B1D /* SUBPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBPreferencesController.h; sourceTree = "<group>"; };
+		C0DFC8D016D67CB600577B1D /* SUBPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBPreferencesController.m; sourceTree = "<group>"; };
+		C0DFC8D116D67CB600577B1D /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,15 @@
 			children = (
 				C0315CBD16D672F7007E3EAD /* SUBDropView.h */,
 				C0315CBE16D672F7007E3EAD /* SUBDropView.m */,
-				B68BAC6F167A5C3C0071F34D /* Subtilest.entitlements */,
+				C0315CC016D673FA007E3EAD /* SUBMovieDropView.h */,
+				C0315CC116D673FA007E3EAD /* SUBMovieDropView.m */,
 				B68BAC5D167A58A60071F34D /* SUBAppDelegate.h */,
 				B68BAC5E167A58A60071F34D /* SUBAppDelegate.m */,
 				B68BAC6C167A5AFE0071F34D /* SUBHashAlgorithm.h */,
 				B68BAC6D167A5AFE0071F34D /* SUBHashAlgorithm.m */,
 				B68BAC60167A58A60071F34D /* MainMenu.xib */,
+				B68BAC6F167A5C3C0071F34D /* Subtilest.entitlements */,
+				C0DFC8D516D684F700577B1D /* Preferences */,
 				B68BAC52167A58A60071F34D /* Supporting Files */,
 			);
 			path = Subtilest;
@@ -118,6 +129,16 @@
 				B68BAC5A167A58A60071F34D /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0DFC8D516D684F700577B1D /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				C0DFC8CF16D67CB600577B1D /* SUBPreferencesController.h */,
+				C0DFC8D016D67CB600577B1D /* SUBPreferencesController.m */,
+				C0DFC8D116D67CB600577B1D /* Preferences.xib */,
+			);
+			name = Preferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +197,7 @@
 				B68BAC56167A58A60071F34D /* InfoPlist.strings in Resources */,
 				B68BAC5C167A58A60071F34D /* Credits.rtf in Resources */,
 				B68BAC62167A58A60071F34D /* MainMenu.xib in Resources */,
+				C0DFC8D316D67CB600577B1D /* Preferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +229,8 @@
 				B68BAC5F167A58A60071F34D /* SUBAppDelegate.m in Sources */,
 				B68BAC6E167A5AFE0071F34D /* SUBHashAlgorithm.m in Sources */,
 				C0315CBF16D672F7007E3EAD /* SUBDropView.m in Sources */,
+				C0315CC216D673FA007E3EAD /* SUBMovieDropView.m in Sources */,
+				C0DFC8D216D67CB600577B1D /* SUBPreferencesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

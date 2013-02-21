@@ -8,9 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 #import <XMLRPC/XMLRPC.h>
+#import "SUBPreferencesController.h"
 
 @interface SUBAppDelegate : NSObject <NSApplicationDelegate, XMLRPCConnectionDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (nonatomic, strong) SUBPreferencesController *preferencesController;
+
+- (IBAction)showPreferences:(id)sender;
 
 @end
