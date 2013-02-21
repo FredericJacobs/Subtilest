@@ -15,31 +15,30 @@
 
 - (void)awakeFromNib
 {
-    [self registerForDraggedTypes:@[NSFilenamesPboardType]];
+    [self registerForDraggedTypes: @[NSFilenamesPboardType]];
 }
 
-- (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender
+- (NSDragOperation)draggingEntered: (id<NSDraggingInfo>)sender
 {
     [self setHighlighted: YES];
     return NSDragOperationEvery;
 }
 
-- (void)draggingExited:(id<NSDraggingInfo>)sender
+- (void)draggingExited: (id<NSDraggingInfo>)sender
 {
-    [self setHighlighted:NO];
+    [self setHighlighted: NO];
 }
 
 
-- (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender
+- (BOOL)prepareForDragOperation: (id<NSDraggingInfo>)sender
 {
     return YES;
 }
 
-- (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
+- (BOOL)performDragOperation: (id<NSDraggingInfo>)sender
 {
     NSPasteboard *pboard = sender.draggingPasteboard;
-    if( [pboard.types containsObject:NSURLPboardType] ) {
-        NSLog(@"Dropped file: %@", [NSURL URLFromPasteboard: pboard].absoluteString);
+    if( [pboard.types containsObject: NSURLPboardType] ) {
         if( self.callback ) {
             self.callback( [NSURL URLFromPasteboard: pboard] );
         }
@@ -53,15 +52,15 @@
     return isHighlighted;
 }
 
-- (void)setHighlighted:(BOOL)value
+- (void)setHighlighted: (BOOL)value
 {
     isHighlighted = value;
-    [self setNeedsDisplay:YES];
+    [self setNeedsDisplay: YES];
 }
 
-- (void)drawRect:(NSRect)frame
+- (void)drawRect: (NSRect)frame
 {
-    [super drawRect:frame];
+    [super drawRect: frame];
     if(self.isHighlighted) {
         NSBezierPath.defaultLineWidth = 6.0;
         [NSColor.keyboardFocusIndicatorColor set];
