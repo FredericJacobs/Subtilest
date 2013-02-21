@@ -16,6 +16,8 @@
 		B68BAC6E167A5AFE0071F34D /* SUBHashAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = B68BAC6D167A5AFE0071F34D /* SUBHashAlgorithm.m */; };
 		C0315CBF16D672F7007E3EAD /* SUBDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0315CBE16D672F7007E3EAD /* SUBDropView.m */; };
 		C0315CC216D673FA007E3EAD /* SUBMovieDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0315CC116D673FA007E3EAD /* SUBMovieDropView.m */; };
+		C050CCA616D6CC9600946582 /* NSLocale+SUBLanguagesNames.m in Sources */ = {isa = PBXBuildFile; fileRef = C050CCA516D6CC9600946582 /* NSLocale+SUBLanguagesNames.m */; };
+		C052B43B16D6D2E60041112B /* SUBPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = C052B43A16D6D2E60041112B /* SUBPreferences.m */; };
 		C0DFC8D216D67CB600577B1D /* SUBPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DFC8D016D67CB600577B1D /* SUBPreferencesController.m */; };
 		C0DFC8D316D67CB600577B1D /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFC8D116D67CB600577B1D /* Preferences.xib */; };
 		E6A7ED7A7F9B4A6A8B9118E9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 014791EC2218413A991BEC44 /* libPods.a */; };
@@ -44,6 +46,10 @@
 		C0315CBE16D672F7007E3EAD /* SUBDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBDropView.m; sourceTree = "<group>"; };
 		C0315CC016D673FA007E3EAD /* SUBMovieDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBMovieDropView.h; sourceTree = "<group>"; };
 		C0315CC116D673FA007E3EAD /* SUBMovieDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBMovieDropView.m; sourceTree = "<group>"; };
+		C050CCA416D6CC9600946582 /* NSLocale+SUBLanguagesNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLocale+SUBLanguagesNames.h"; sourceTree = "<group>"; };
+		C050CCA516D6CC9600946582 /* NSLocale+SUBLanguagesNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+SUBLanguagesNames.m"; sourceTree = "<group>"; };
+		C052B43916D6D2E60041112B /* SUBPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBPreferences.h; sourceTree = "<group>"; };
+		C052B43A16D6D2E60041112B /* SUBPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBPreferences.m; sourceTree = "<group>"; };
 		C0DFC8CF16D67CB600577B1D /* SUBPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBPreferencesController.h; sourceTree = "<group>"; };
 		C0DFC8D016D67CB600577B1D /* SUBPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBPreferencesController.m; sourceTree = "<group>"; };
 		C0DFC8D116D67CB600577B1D /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 				B68BAC6F167A5C3C0071F34D /* Subtilest.entitlements */,
 				C0DFC8D516D684F700577B1D /* Preferences */,
 				B68BAC52167A58A60071F34D /* Supporting Files */,
+				C050CCA716D6CC9B00946582 /* Categories */,
 			);
 			path = Subtilest;
 			sourceTree = "<group>";
@@ -131,12 +138,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C050CCA716D6CC9B00946582 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C050CCA416D6CC9600946582 /* NSLocale+SUBLanguagesNames.h */,
+				C050CCA516D6CC9600946582 /* NSLocale+SUBLanguagesNames.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		C0DFC8D516D684F700577B1D /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
+				C0DFC8D116D67CB600577B1D /* Preferences.xib */,
 				C0DFC8CF16D67CB600577B1D /* SUBPreferencesController.h */,
 				C0DFC8D016D67CB600577B1D /* SUBPreferencesController.m */,
-				C0DFC8D116D67CB600577B1D /* Preferences.xib */,
+				C052B43916D6D2E60041112B /* SUBPreferences.h */,
+				C052B43A16D6D2E60041112B /* SUBPreferences.m */,
 			);
 			name = Preferences;
 			sourceTree = "<group>";
@@ -231,6 +249,8 @@
 				C0315CBF16D672F7007E3EAD /* SUBDropView.m in Sources */,
 				C0315CC216D673FA007E3EAD /* SUBMovieDropView.m in Sources */,
 				C0DFC8D216D67CB600577B1D /* SUBPreferencesController.m in Sources */,
+				C050CCA616D6CC9600946582 /* NSLocale+SUBLanguagesNames.m in Sources */,
+				C052B43B16D6D2E60041112B /* SUBPreferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

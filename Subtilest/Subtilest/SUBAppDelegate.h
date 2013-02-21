@@ -12,8 +12,8 @@
 
 @interface SUBAppDelegate : NSObject <NSApplicationDelegate, XMLRPCConnectionDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
-@property (nonatomic, strong) SUBPreferencesController *preferencesController;
+@property (weak) IBOutlet NSWindow *window;
+@property (strong) IBOutlet SUBPreferencesController *preferencesController;
 
 - (IBAction)showPreferences:(id)sender;
 

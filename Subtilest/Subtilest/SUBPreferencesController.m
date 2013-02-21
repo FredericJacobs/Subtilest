@@ -7,19 +7,16 @@
 //
 
 #import "SUBPreferencesController.h"
+#import "NSLocale+SUBLanguagesNames.h"
+#import "SUBPreferences.h"
 
-@interface SUBPreferencesController ()
-
-@end
 
 @implementation SUBPreferencesController
 
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
-    if (self) {
-        // Initialization code here.
-    }
+    if (self) {}
 
     return self;
 }
@@ -28,7 +25,21 @@
 {
     [super windowDidLoad];
 
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    NSLocale * locale = [NSLocale currentLocale];
+
+    [self.languageSelector removeAllItems];
+    [self.languageSelector addItemsWithTitles: [locale localizedLanguagesNames]];
+    [self.languageSelector setTarget: self];
+    [self.languageSelector setAction: @selector(languageDidChange:)];
+
+    NSString * selectedLanguage = [[SUBPreferences sharedInstance] subtitlesLanguage];
+    [self.languageSelector selectItemWithTitle: [locale displayNameForKey: NSLocaleIdentifier value: selectedLanguage]];
+}
+
+- (void)languageDidChange: (id)sender
+{
+    NSString * selectedLanguageISOCode = [[NSLocale currentLocale] isoLanguageCodeForName: self.languageSelector.selectedItem.title];
+    [[SUBPreferences sharedInstance] setSubtitlesLanguage: selectedLanguageISOCode];
 }
 
 @end

@@ -10,4 +10,6 @@
 
 @interface SUBPreferencesController : NSWindowController
 
+@property (weak) IBOutlet NSPopUpButton * languageSelector;
+
 @end
