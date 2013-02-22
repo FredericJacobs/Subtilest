@@ -10,7 +10,7 @@
 
 @implementation NSLocale (SUBLocalizedLanguagesNames)
 
-- (NSArray *)localizedLanguagesNames
+- (NSArray *)localizedLanguageNames
 {
     NSMutableArray * languagesTitles = [[NSMutableArray alloc] init];
     NSArray * isoLanguageCodes = [NSLocale ISOLanguageCodes];

@@ -28,7 +28,7 @@
     NSLocale * locale = [NSLocale currentLocale];
 
     [self.languageSelector removeAllItems];
-    [self.languageSelector addItemsWithTitles: [locale localizedLanguagesNames]];
+    [self.languageSelector addItemsWithTitles: [locale localizedLanguageNames]];
     [self.languageSelector setTarget: self];
     [self.languageSelector setAction: @selector(languageDidChange:)];
 

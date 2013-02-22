@@ -10,7 +10,7 @@
 
 @interface NSLocale (SUBLocalizedLanguagesNames)
 
-- (NSArray *)localizedLanguagesNames;
+- (NSArray *)localizedLanguageNames;
 - (NSString *)isoLanguageCodeForName: (NSString *)displayName;
 
 @end
