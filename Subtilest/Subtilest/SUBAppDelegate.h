@@ -10,7 +10,7 @@
 #import <XMLRPC/XMLRPC.h>
 #import "SUBPreferencesController.h"
 
-@interface SUBAppDelegate : NSObject <NSApplicationDelegate, XMLRPCConnectionDelegate>
+@interface SUBAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (weak) IBOutlet NSWindow *window;
 @property (strong) IBOutlet SUBPreferencesController *preferencesController;
