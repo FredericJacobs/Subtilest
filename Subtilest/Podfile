@@ -1,4 +1,4 @@
 platform :osx, '10.8'
 pod 'xmlrpc', '~> 2.3.2'
-pod 'OROpenSubtitleDownloader', { :git => 'https://github.com/romac/OROpenSubtitleDownloader.git' }
+pod 'OROpenSubtitleDownloader', '~> 0.2'
 
