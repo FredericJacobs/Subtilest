@@ -15,9 +15,9 @@
 {
 	return [NSString stringWithFormat:@"%qx", hash ];
 }
-+(VideoHash)hashForPath:(NSString*)path
++(SUBVideoHash)hashForPath:(NSString*)path
 {
-	VideoHash hash;
+	SUBVideoHash hash;
 	hash.fileHash =0;
 	hash.fileSize =0;
 	
@@ -26,9 +26,9 @@
 	[readFile closeFile];
 	return hash;
 }
-+(VideoHash)hashForURL:(NSURL*)url
++(SUBVideoHash)hashForURL:(NSURL*)url
 {
-	VideoHash hash;
+	SUBVideoHash hash;
 	hash.fileHash =0;
 	hash.fileSize =0;
 	
@@ -37,9 +37,9 @@
 	return hash;
 }
 
-+(VideoHash)hashForFile:(NSFileHandle*)handle
++(SUBVideoHash)hashForFile:(NSFileHandle*)handle
 {
-	VideoHash retHash;
+	SUBVideoHash retHash;
 	retHash.fileHash =0;
 	retHash.fileSize =0;
 	

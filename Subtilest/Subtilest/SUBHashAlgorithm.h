@@ -12,14 +12,14 @@ typedef struct
 {
 	uint64_t fileHash;
 	uint64_t fileSize;
-} VideoHash;
+} SUBVideoHash;
 
 @interface SUBHashAlgorithm : NSObject {
     
 }
-+(VideoHash)hashForPath:(NSString*)path;
-+(VideoHash)hashForURL:(NSURL*)url;
-+(VideoHash)hashForFile:(NSFileHandle*)handle;
++(SUBVideoHash)hashForPath:(NSString*)path;
++(SUBVideoHash)hashForURL:(NSURL*)url;
++(SUBVideoHash)hashForFile:(NSFileHandle*)handle;
 +(NSString*)stringForHash:(uint64_t)hash;
 
 

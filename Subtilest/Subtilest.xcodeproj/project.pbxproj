@@ -18,6 +18,7 @@
 		C0315CC216D673FA007E3EAD /* SUBMovieDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0315CC116D673FA007E3EAD /* SUBMovieDropView.m */; };
 		C050CCA616D6CC9600946582 /* NSLocale+SUBLanguagesNames.m in Sources */ = {isa = PBXBuildFile; fileRef = C050CCA516D6CC9600946582 /* NSLocale+SUBLanguagesNames.m */; };
 		C052B43B16D6D2E60041112B /* SUBPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = C052B43A16D6D2E60041112B /* SUBPreferences.m */; };
+		C0D4D49C16DD02CA003BC8EB /* SUBSubtitleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D4D49B16DD02CA003BC8EB /* SUBSubtitleManager.m */; };
 		C0DFC8D216D67CB600577B1D /* SUBPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DFC8D016D67CB600577B1D /* SUBPreferencesController.m */; };
 		C0DFC8D316D67CB600577B1D /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFC8D116D67CB600577B1D /* Preferences.xib */; };
 		E6A7ED7A7F9B4A6A8B9118E9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 014791EC2218413A991BEC44 /* libPods.a */; };
@@ -50,6 +51,8 @@
 		C050CCA516D6CC9600946582 /* NSLocale+SUBLanguagesNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+SUBLanguagesNames.m"; sourceTree = "<group>"; };
 		C052B43916D6D2E60041112B /* SUBPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBPreferences.h; sourceTree = "<group>"; };
 		C052B43A16D6D2E60041112B /* SUBPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBPreferences.m; sourceTree = "<group>"; };
+		C0D4D49A16DD02CA003BC8EB /* SUBSubtitleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBSubtitleManager.h; sourceTree = "<group>"; };
+		C0D4D49B16DD02CA003BC8EB /* SUBSubtitleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBSubtitleManager.m; sourceTree = "<group>"; };
 		C0DFC8CF16D67CB600577B1D /* SUBPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBPreferencesController.h; sourceTree = "<group>"; };
 		C0DFC8D016D67CB600577B1D /* SUBPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBPreferencesController.m; sourceTree = "<group>"; };
 		C0DFC8D116D67CB600577B1D /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
@@ -109,10 +112,9 @@
 		B68BAC51167A58A60071F34D /* Subtilest */ = {
 			isa = PBXGroup;
 			children = (
+				C0D4D49916DD002E003BC8EB /* Utilities */,
 				B68BAC5D167A58A60071F34D /* SUBAppDelegate.h */,
 				B68BAC5E167A58A60071F34D /* SUBAppDelegate.m */,
-				B68BAC6C167A5AFE0071F34D /* SUBHashAlgorithm.h */,
-				B68BAC6D167A5AFE0071F34D /* SUBHashAlgorithm.m */,
 				B68BAC60167A58A60071F34D /* MainMenu.xib */,
 				B68BAC6F167A5C3C0071F34D /* Subtilest.entitlements */,
 				C052B43C16D6DB310041112B /* Views */,
@@ -153,6 +155,17 @@
 				C0315CC116D673FA007E3EAD /* SUBMovieDropView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		C0D4D49916DD002E003BC8EB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B68BAC6C167A5AFE0071F34D /* SUBHashAlgorithm.h */,
+				B68BAC6D167A5AFE0071F34D /* SUBHashAlgorithm.m */,
+				C0D4D49A16DD02CA003BC8EB /* SUBSubtitleManager.h */,
+				C0D4D49B16DD02CA003BC8EB /* SUBSubtitleManager.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		C0DFC8D516D684F700577B1D /* Preferences */ = {
@@ -259,6 +272,7 @@
 				C0DFC8D216D67CB600577B1D /* SUBPreferencesController.m in Sources */,
 				C050CCA616D6CC9600946582 /* NSLocale+SUBLanguagesNames.m in Sources */,
 				C052B43B16D6D2E60041112B /* SUBPreferences.m in Sources */,
+				C0D4D49C16DD02CA003BC8EB /* SUBSubtitleManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
