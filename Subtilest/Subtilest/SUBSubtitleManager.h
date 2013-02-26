@@ -12,7 +12,7 @@
 
 @interface SUBSubtitleManager : NSObject
 
-@property (weak) OROpenSubtitleDownloader *downloader;
+@property (strong) OROpenSubtitleDownloader *downloader;
 @property BOOL renameSubtitleFile;
 
 - (SUBSubtitleManager *)initWithDownloader: (OROpenSubtitleDownloader *) downloader;

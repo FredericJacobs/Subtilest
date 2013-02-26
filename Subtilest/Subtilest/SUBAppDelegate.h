@@ -13,14 +13,14 @@
 #import "SUBHashAlgorithm.h"
 #import "SUBSubtitleManager.h"
 
-@interface SUBAppDelegate : NSObject <NSApplicationDelegate>
+@interface SUBAppDelegate : NSObject <NSApplicationDelegate, OROpenSubtitleDownloaderDelegate>
 
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet SUBMovieDropView *dropView;
 @property (strong) IBOutlet SUBPreferencesController *preferencesController;
-
 @property (strong) SUBSubtitleManager *subtitleManager;
 
+- (void)openSubtitlerDidLogIn:(OROpenSubtitleDownloader *)downloader;
 - (void)fetchSubtitlesForFileAtPath: (NSString *)filePath;
 - (IBAction)showPreferences:(id)sender;
 

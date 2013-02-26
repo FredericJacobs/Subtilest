@@ -17,6 +17,8 @@
         self.downloader = downloader;
     }
     
+    [self debugState];
+
     return self;
 }
 
@@ -25,14 +27,40 @@
     SUBVideoHash hash = [SUBHashAlgorithm hashForPath: moviePath];
     NSString *hashString = [NSString stringWithFormat: @"%llu", hash.fileHash];
     NSNumber *fileSize = [NSNumber numberWithUnsignedLongLong: hash.fileSize];
-    
+
     NSLog( @"File path: %@", moviePath );
-    NSLog( @"File hash: %llu", hash.fileHash );
-    NSLog( @"File size: %llu", hash.fileSize );
+    NSLog( @"File hash: %@", hashString );
+    NSLog( @"File size: %@", fileSize );
+
+    [self debugState];
 
     [self.downloader searchForSubtitlesWithHash: hashString andFilesize: fileSize: ^(NSArray *subtitles) {
+        [self debugState];
         NSLog( @"%@", subtitles );
     }];
+
+    [self debugState];
+}
+
+-(void)debugState
+{
+    switch( self.downloader.state ) {
+        case OROpenSubtitleStateLoggingIn:
+            NSLog( @"State: OROpenSubtitleStateLoggingIn" );
+            break;
+        case OROpenSubtitleStateLoggedIn:
+            NSLog( @"State: OROpenSubtitleStateLoggedIn" );
+            break;
+        case OROpenSubtitleStateSearching:
+            NSLog( @"State: OROpenSubtitleStateSearching" );
+            break;
+        case OROpenSubtitleStateDownloading:
+            NSLog( @"State: OROpenSubtitleStateDownloading" );
+            break;
+        case OROpenSubtitleStateDownloaded:
+            NSLog( @"State: OROpenSubtitleStateDownloaded" );
+            break;
+    }
 }
 
 @end

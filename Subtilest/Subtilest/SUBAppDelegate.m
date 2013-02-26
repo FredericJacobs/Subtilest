@@ -17,11 +17,17 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     OROpenSubtitleDownloader *downloader = [[OROpenSubtitleDownloader alloc] initWithUserAgent: @"OS Test User Agent"];
-    self.subtitleManager = [[SUBSubtitleManager alloc] initWithDownloader: downloader];
+    downloader.delegate = self;
     
     self.dropView.callback = ^( NSURL *url ) {
         [self fetchSubtitlesForFileAtPath: url.path];
     };
+}
+
+- (void)openSubtitlerDidLogIn:(OROpenSubtitleDownloader *)downloader
+{
+    NSLog( @"OROpenSubtitleDownloader did log in." );
+    self.subtitleManager = [[SUBSubtitleManager alloc] initWithDownloader: downloader];
 }
 
 - (BOOL)application: (NSApplication *)theApplication openFile: (NSString *)filePath
