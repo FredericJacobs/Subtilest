@@ -19,10 +19,25 @@
 		C050CCA616D6CC9600946582 /* NSLocale+SUBLanguagesNames.m in Sources */ = {isa = PBXBuildFile; fileRef = C050CCA516D6CC9600946582 /* NSLocale+SUBLanguagesNames.m */; };
 		C052B43B16D6D2E60041112B /* SUBPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = C052B43A16D6D2E60041112B /* SUBPreferences.m */; };
 		C0D4D49C16DD02CA003BC8EB /* SUBSubtitleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D4D49B16DD02CA003BC8EB /* SUBSubtitleManager.m */; };
+		C0DE09DA16DD4FBF00FD2D3B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0DE09D916DD4FBF00FD2D3B /* Sparkle.framework */; };
+		C0DE09DC16DD4FF500FD2D3B /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0DE09D916DD4FBF00FD2D3B /* Sparkle.framework */; };
 		C0DFC8D216D67CB600577B1D /* SUBPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DFC8D016D67CB600577B1D /* SUBPreferencesController.m */; };
 		C0DFC8D316D67CB600577B1D /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFC8D116D67CB600577B1D /* Preferences.xib */; };
 		E6A7ED7A7F9B4A6A8B9118E9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 014791EC2218413A991BEC44 /* libPods.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C0DE09DB16DD4FE800FD2D3B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C0DE09DC16DD4FF500FD2D3B /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		014791EC2218413A991BEC44 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +69,7 @@
 		C05A8B1216DD4653004562C2 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		C0D4D49A16DD02CA003BC8EB /* SUBSubtitleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBSubtitleManager.h; sourceTree = "<group>"; };
 		C0D4D49B16DD02CA003BC8EB /* SUBSubtitleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBSubtitleManager.m; sourceTree = "<group>"; };
+		C0DE09D916DD4FBF00FD2D3B /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		C0DFC8CF16D67CB600577B1D /* SUBPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBPreferencesController.h; sourceTree = "<group>"; };
 		C0DFC8D016D67CB600577B1D /* SUBPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBPreferencesController.m; sourceTree = "<group>"; };
 		C0DFC8D116D67CB600577B1D /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
@@ -66,6 +82,7 @@
 			files = (
 				B68BAC4C167A58A60071F34D /* Cocoa.framework in Frameworks */,
 				E6A7ED7A7F9B4A6A8B9118E9 /* libPods.a in Frameworks */,
+				C0DE09DA16DD4FBF00FD2D3B /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +110,7 @@
 		B68BAC4A167A58A60071F34D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C0DE09D916DD4FBF00FD2D3B /* Sparkle.framework */,
 				B68BAC4B167A58A60071F34D /* Cocoa.framework */,
 				B68BAC4D167A58A60071F34D /* Other Frameworks */,
 				014791EC2218413A991BEC44 /* libPods.a */,
@@ -193,6 +211,7 @@
 				B68BAC44167A58A60071F34D /* Frameworks */,
 				B68BAC45167A58A60071F34D /* Resources */,
 				BD507128368C4A0383A028B8 /* Copy Pods Resources */,
+				C0DE09DB16DD4FE800FD2D3B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -370,6 +389,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Subtilest-hggyrjikqmiwvhcrepdbfipbmgyr/Build/Products/Release\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Subtilest/Subtilest-Prefix.pch";
@@ -388,6 +408,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Subtilest-hggyrjikqmiwvhcrepdbfipbmgyr/Build/Products/Release\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Subtilest/Subtilest-Prefix.pch";
