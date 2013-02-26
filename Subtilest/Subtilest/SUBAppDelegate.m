@@ -10,31 +10,31 @@
 #import "SUBAppDelegate.h"
 #import "SUBHashAlgorithm.h"
 #import "SUBSubtitleManager.h"
+#import "SUBPreferences.h"
 
 @implementation SUBAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Can't even instanciate the class yet, because it tries to login with OpenSubtitles.org and our app hasn't been submitted yet.
-    // OROpenSubtitleDownloader *downloader = [[OROpenSubtitleDownloader alloc] init];
-    // self.manager = [[SUBSubtitleManager alloc] initWithDownloader: downloader];
+    OROpenSubtitleDownloader *downloader = [[OROpenSubtitleDownloader alloc] initWithUserAgent: @"OS Test User Agent"];
+    self.subtitleManager = [[SUBSubtitleManager alloc] initWithDownloader: downloader];
     
     self.dropView.callback = ^( NSURL *url ) {
-        [self fetchSubtitlesForFilePath: url.path];
+        [self fetchSubtitlesForFileAtPath: url.path];
     };
 }
 
 - (BOOL)application: (NSApplication *)theApplication openFile: (NSString *)filePath
 {
-    [self fetchSubtitlesForFilePath: filePath];
+    [self fetchSubtitlesForFileAtPath: filePath];
     
     return TRUE;
 }
 
-- (void)fetchSubtitlesForFilePath: (NSString *)filePath
+- (void)fetchSubtitlesForFileAtPath: (NSString *)filePath
 {
-    SUBVideoHash hash = [SUBHashAlgorithm hashForPath: filePath];
-    NSLog( @"File path: %@\nFile hash: %llu\nFile size: %llu", filePath, hash.fileHash, hash.fileSize );
+    self.subtitleManager.renameSubtitleFile = [[SUBPreferences sharedInstance] shouldRenameSubtitles];
+    [self.subtitleManager fetchSubtitleForMovieAtPath: filePath];
 }
 
 - (IBAction)showPreferences:(id)sender

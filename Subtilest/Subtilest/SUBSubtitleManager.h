@@ -10,15 +10,12 @@
 #import <OROpenSubtitleDownloader.h>
 #import "SUBHashAlgorithm.h"
 
-@protocol SUBSubtitleDownloader <NSObject>
-
-@end
-
 @interface SUBSubtitleManager : NSObject
 
 @property (weak) OROpenSubtitleDownloader *downloader;
+@property BOOL renameSubtitleFile;
 
 - (SUBSubtitleManager *)initWithDownloader: (OROpenSubtitleDownloader *) downloader;
-- (void)fetchSubtitlesForHash: (SUBVideoHash)hash;
+- (void)fetchSubtitleForMovieAtPath: (NSString *)moviePath;
 
 @end

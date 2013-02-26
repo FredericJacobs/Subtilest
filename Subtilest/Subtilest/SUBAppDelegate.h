@@ -19,9 +19,9 @@
 @property (weak) IBOutlet SUBMovieDropView *dropView;
 @property (strong) IBOutlet SUBPreferencesController *preferencesController;
 
-@property (strong) SUBSubtitleManager *manager;
+@property (strong) SUBSubtitleManager *subtitleManager;
 
-- (void)fetchSubtitlesForFilePath: (NSString *)filePath;
+- (void)fetchSubtitlesForFileAtPath: (NSString *)filePath;
 - (IBAction)showPreferences:(id)sender;
 
 
