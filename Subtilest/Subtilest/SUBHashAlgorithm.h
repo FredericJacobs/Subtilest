@@ -3,7 +3,7 @@
 //  Subtilest
 //
 //  Created by Frederic Jacobs on 13/12/12.
-//  Copyright (c) 2012 Frederic Jacobs. All rights reserved.
+//  Copyright (c) 2013 Frederic Jacobs & Romain Ruetschi. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
