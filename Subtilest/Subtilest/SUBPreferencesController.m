@@ -29,17 +29,20 @@
 
     [self.languageSelector removeAllItems];
     [self.languageSelector addItemsWithTitles: [locale localizedLanguageNames]];
-    [self.languageSelector setTarget: self];
-    [self.languageSelector setAction: @selector(languageDidChange:)];
 
     NSString * selectedLanguage = [[SUBPreferences sharedInstance] subtitlesLanguage];
     [self.languageSelector selectItemWithTitle: [locale displayNameForKey: NSLocaleIdentifier value: selectedLanguage]];
 }
 
-- (void)languageDidChange: (id)sender
+- (IBAction)languageDidChange: (id)sender
 {
     NSString * selectedLanguageISOCode = [[NSLocale currentLocale] isoLanguageCodeForName: self.languageSelector.selectedItem.title];
     [[SUBPreferences sharedInstance] setSubtitlesLanguage: selectedLanguageISOCode];
+}
+
+- (IBAction)renameSubtitlesCheckboxClicked: (id)sender
+{
+    [[SUBPreferences sharedInstance] setShouldRenameSubtitles: (self.renameSubtitlesCheckbox.state == NSOnState)];
 }
 
 @end

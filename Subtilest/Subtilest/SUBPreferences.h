@@ -10,8 +10,12 @@
 
 @interface SUBPreferences : NSObject
 
+@property (weak) NSUserDefaults *userDefaults;
+
 + (id)sharedInstance;
 - (void)setSubtitlesLanguage: (NSString *)languageISOCode;
 - (NSString *)subtitlesLanguage;
+- (void)setShouldRenameSubtitles: (BOOL)value;
+- (BOOL)shouldRenameSubtitles;
 
 @end

@@ -11,5 +11,9 @@
 @interface SUBPreferencesController : NSWindowController
 
 @property (weak) IBOutlet NSPopUpButton * languageSelector;
+@property (weak) IBOutlet NSButton * renameSubtitlesCheckbox;
+
+- (IBAction)languageDidChange: (id)sender;
+- (IBAction)renameSubtitlesCheckboxClicked: (id)sender;
 
 @end

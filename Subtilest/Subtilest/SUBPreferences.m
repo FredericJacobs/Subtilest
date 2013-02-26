@@ -9,6 +9,7 @@
 #import "SUBPreferences.h"
 
 static NSString * const kSubtitlesLanguageKey = @"Subtitles Language";
+static NSString * const kRenameSubtitlesKey = @"Rename Subtitles";
 
 @implementation SUBPreferences
 
@@ -22,20 +23,39 @@ static NSString * const kSubtitlesLanguageKey = @"Subtitles Language";
     return sharedInstance;
 }
 
+- (id)init
+{
+    self = [super init];
+    self.userDefaults = [NSUserDefaults standardUserDefaults];
+    return self;
+}
+
 - (void)setSubtitlesLanguage: (NSString *)languageISOCode
 {
-    [[NSUserDefaults standardUserDefaults] setObject: languageISOCode forKey: kSubtitlesLanguageKey];
+    [self.userDefaults setObject: languageISOCode forKey: kSubtitlesLanguageKey];
+    [self.userDefaults synchronize];
 }
 
 - (NSString *)subtitlesLanguage
 {
-    NSString * selectedLanguage = [[NSUserDefaults standardUserDefaults] objectForKey: kSubtitlesLanguageKey];
+    NSString * selectedLanguage = [self.userDefaults stringForKey: kSubtitlesLanguageKey];
 
     if( selectedLanguage ) {
         return selectedLanguage;
     }
 
     return [[NSLocale preferredLanguages] objectAtIndex: 0];
+}
+
+- (void)setShouldRenameSubtitles: (BOOL)value
+{
+    [self.userDefaults setBool: value forKey: kRenameSubtitlesKey];
+    [self.userDefaults synchronize];
+}
+
+- (BOOL)shouldRenameSubtitles
+{
+    return [self.userDefaults boolForKey: kRenameSubtitlesKey];
 }
 
 @end
