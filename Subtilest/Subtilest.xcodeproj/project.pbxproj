@@ -51,6 +51,7 @@
 		C050CCA516D6CC9600946582 /* NSLocale+SUBLanguagesNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+SUBLanguagesNames.m"; sourceTree = "<group>"; };
 		C052B43916D6D2E60041112B /* SUBPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBPreferences.h; sourceTree = "<group>"; };
 		C052B43A16D6D2E60041112B /* SUBPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBPreferences.m; sourceTree = "<group>"; };
+		C05A8B1216DD4653004562C2 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		C0D4D49A16DD02CA003BC8EB /* SUBSubtitleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBSubtitleManager.h; sourceTree = "<group>"; };
 		C0D4D49B16DD02CA003BC8EB /* SUBSubtitleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBSubtitleManager.m; sourceTree = "<group>"; };
 		C0DFC8CF16D67CB600577B1D /* SUBPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBPreferencesController.h; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 		B68BAC52167A58A60071F34D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C05A8B1216DD4653004562C2 /* Podfile */,
 				B68BAC53167A58A60071F34D /* Subtilest-Info.plist */,
 				B68BAC54167A58A60071F34D /* InfoPlist.strings */,
 				B68BAC57167A58A60071F34D /* main.m */,
