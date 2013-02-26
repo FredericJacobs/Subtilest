@@ -40,7 +40,9 @@
     NSPasteboard *pboard = sender.draggingPasteboard;
     if( [pboard.types containsObject: NSURLPboardType] ) {
         if( self.callback ) {
-            self.callback( [NSURL URLFromPasteboard: pboard] );
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+               self.callback([NSURL URLFromPasteboard: pboard]); 
+            });
         }
     }
     [self setHighlighted: NO];
