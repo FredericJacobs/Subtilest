@@ -135,11 +135,11 @@
 		B68BAC51167A58A60071F34D /* Subtilest */ = {
 			isa = PBXGroup;
 			children = (
-				C0D4D49916DD002E003BC8EB /* Utilities */,
 				B68BAC5D167A58A60071F34D /* SUBAppDelegate.h */,
 				B68BAC5E167A58A60071F34D /* SUBAppDelegate.m */,
 				B68BAC60167A58A60071F34D /* MainMenu.xib */,
 				B68BAC6F167A5C3C0071F34D /* Subtilest.entitlements */,
+				C0D4D49916DD002E003BC8EB /* Utilities */,
 				C052B43C16D6DB310041112B /* Views */,
 				C0DFC8D516D684F700577B1D /* Preferences */,
 				C050CCA716D6CC9B00946582 /* Categories */,
