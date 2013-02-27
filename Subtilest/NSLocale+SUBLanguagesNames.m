@@ -10,34 +10,27 @@
 
 @implementation NSLocale (SUBLocalizedLanguagesNames)
 
-- (NSArray *)localizedLanguageNames
++ (NSDictionary *)ISO6392LanguageMap
 {
-    NSMutableArray * languagesTitles = [[NSMutableArray alloc] init];
-    NSArray * isoLanguageCodes = [NSLocale ISOLanguageCodes];
-
-    for( NSString * isoCode in isoLanguageCodes ) {
-        if(isoCode != nil) {
-            NSString * languageTitle = [self displayNameForKey: NSLocaleIdentifier value: isoCode];
-            if( languageTitle != nil ) {
-                [languagesTitles addObject: languageTitle];
-            }
-        }
-    }
-
-    // Return an immutable copy
-    return [languagesTitles copy];
+    NSError *error;
+    NSData *data = [NSData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"iso639-2" ofType: @"json"]];
+    NSDictionary *map = [NSJSONSerialization JSONObjectWithData: data options: 0 error: &error];
+    
+    // TODO: Check for errors
+    // TODO: Cache result
+    
+    return map;
 }
 
-// FIXME: Ugly and slow, better make a dictionary which maps ISO codes to their display name
-- (NSString *)isoLanguageCodeForName: (NSString *) displayName
++ (NSArray *)ISO6392LanguageCodes
 {
-    for( NSString * isoCode in [NSLocale ISOLanguageCodes] ) {
-        if( [displayName isEqualToString: [self displayNameForKey: NSLocaleIdentifier value: isoCode]] ) {
-            return isoCode;
-        }
-    }
+    return [[NSLocale ISO6392LanguageMap] allKeys];
+}
 
-    return nil;
++ (NSArray *)ISO6392LanguageNames
+{
+    return [[NSLocale ISO6392LanguageMap] allValues];
+
 }
 
 @end

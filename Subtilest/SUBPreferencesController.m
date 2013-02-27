@@ -25,18 +25,17 @@
 {
     [super windowDidLoad];
 
-    NSLocale * locale = [NSLocale currentLocale];
-
     [self.languageSelector removeAllItems];
-    [self.languageSelector addItemsWithTitles: [locale localizedLanguageNames]];
+    [self.languageSelector addItemsWithTitles: [[NSLocale ISO6392LanguageNames] sortedArrayUsingSelector: @selector(localizedCaseInsensitiveCompare:)]];
 
-    NSString * selectedLanguage = [[SUBPreferences sharedInstance] subtitlesLanguage];
-    [self.languageSelector selectItemWithTitle: [locale displayNameForKey: NSLocaleIdentifier value: selectedLanguage]];
+    NSString *selectedLanguage = [[SUBPreferences sharedInstance] subtitlesLanguage];
+    NSLog(@"%@", selectedLanguage);
+    [self.languageSelector selectItemWithTitle: [NSLocale ISO6392LanguageMap][selectedLanguage]];
 }
 
 - (IBAction)languageDidChange: (id)sender
 {
-    NSString * selectedLanguageISOCode = [[NSLocale currentLocale] isoLanguageCodeForName: self.languageSelector.selectedItem.title];
+    NSString * selectedLanguageISOCode = [[NSLocale ISO6392LanguageMap] allKeysForObject: self.languageSelector.selectedItem.title][0];
     [[SUBPreferences sharedInstance] setSubtitlesLanguage: selectedLanguageISOCode];
 }
 

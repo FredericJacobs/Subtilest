@@ -18,6 +18,7 @@
 		C0315CC216D673FA007E3EAD /* SUBMovieDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0315CC116D673FA007E3EAD /* SUBMovieDropView.m */; };
 		C050CCA616D6CC9600946582 /* NSLocale+SUBLanguagesNames.m in Sources */ = {isa = PBXBuildFile; fileRef = C050CCA516D6CC9600946582 /* NSLocale+SUBLanguagesNames.m */; };
 		C052B43B16D6D2E60041112B /* SUBPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = C052B43A16D6D2E60041112B /* SUBPreferences.m */; };
+		C0D077AE16DE9B8C00C3AB46 /* iso639-2.json in Resources */ = {isa = PBXBuildFile; fileRef = C0D077AD16DE9B8C00C3AB46 /* iso639-2.json */; };
 		C0D4D49C16DD02CA003BC8EB /* SUBSubtitleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D4D49B16DD02CA003BC8EB /* SUBSubtitleManager.m */; };
 		C0DE09DA16DD4FBF00FD2D3B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0DE09D916DD4FBF00FD2D3B /* Sparkle.framework */; };
 		C0DE09DC16DD4FF500FD2D3B /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0DE09D916DD4FBF00FD2D3B /* Sparkle.framework */; };
@@ -67,6 +68,7 @@
 		C052B43916D6D2E60041112B /* SUBPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBPreferences.h; sourceTree = "<group>"; };
 		C052B43A16D6D2E60041112B /* SUBPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBPreferences.m; sourceTree = "<group>"; };
 		C05A8B1216DD4653004562C2 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		C0D077AD16DE9B8C00C3AB46 /* iso639-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "iso639-2.json"; sourceTree = "<group>"; };
 		C0D4D49A16DD02CA003BC8EB /* SUBSubtitleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBSubtitleManager.h; sourceTree = "<group>"; };
 		C0D4D49B16DD02CA003BC8EB /* SUBSubtitleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBSubtitleManager.m; sourceTree = "<group>"; };
 		C0DE09D916DD4FBF00FD2D3B /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
@@ -138,8 +140,8 @@
 				B68BAC6F167A5C3C0071F34D /* Subtilest.entitlements */,
 				C052B43C16D6DB310041112B /* Views */,
 				C0DFC8D516D684F700577B1D /* Preferences */,
-				B68BAC52167A58A60071F34D /* Supporting Files */,
 				C050CCA716D6CC9B00946582 /* Categories */,
+				B68BAC52167A58A60071F34D /* Supporting Files */,
 			);
 			path = Subtilest;
 			sourceTree = "<group>";
@@ -153,6 +155,7 @@
 				B68BAC57167A58A60071F34D /* main.m */,
 				B68BAC59167A58A60071F34D /* Subtilest-Prefix.pch */,
 				B68BAC5A167A58A60071F34D /* Credits.rtf */,
+				C0D077AD16DE9B8C00C3AB46 /* iso639-2.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				B68BAC5C167A58A60071F34D /* Credits.rtf in Resources */,
 				B68BAC62167A58A60071F34D /* MainMenu.xib in Resources */,
 				C0DFC8D316D67CB600577B1D /* Preferences.xib in Resources */,
+				C0D077AE16DE9B8C00C3AB46 /* iso639-2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

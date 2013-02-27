@@ -8,6 +8,7 @@
 
 #import "SUBSubtitleManager.h"
 #import "SUBHashAlgorithm.h"
+#import "SUBPreferences.h"
 
 @implementation SUBSubtitleManager
 
@@ -16,8 +17,6 @@
     if( self = [super init] ) {
         self.downloader = downloader;
     }
-
-    [self debugState];
 
     return self;
 }
@@ -28,18 +27,18 @@
     NSString *hashString = [NSString stringWithFormat: @"%0llx", hash.fileHash];
     NSNumber *fileSize = [NSNumber numberWithUnsignedLongLong: hash.fileSize];
 
-    NSLog( @"File path: %@", moviePath );
-    NSLog( @"File hash: %@", hashString );
-    NSLog( @"File size: %@", fileSize );
-
-    [self debugState];
-
+    self.downloader.languageString = [[SUBPreferences sharedInstance] subtitlesLanguage];
     [self.downloader searchForSubtitlesWithHash: hashString andFilesize: fileSize: ^(NSArray *subtitles) {
-        [self debugState];
         NSLog( @"%@", subtitles );
+        
+        for( OpenSubtitleSearchResult *subtitle in subtitles ) {
+            NSLog( @"ID:       %@", subtitle.subtitleID );
+            NSLog( @"Language: %@", subtitle.subtitleLanguage );
+            NSLog( @"ISO-639:  %@", subtitle.iso639Language );
+            NSLog( @"Download: %@", subtitle.subtitleDownloadAddress );
+            NSLog( @"-----------------------------" );
+        }
     }];
-
-    [self debugState];
 }
 
 -(void)debugState

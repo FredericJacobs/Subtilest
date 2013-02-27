@@ -43,8 +43,9 @@ static NSString * const kRenameSubtitlesKey = @"Rename Subtitles";
     if( selectedLanguage ) {
         return selectedLanguage;
     }
-
-    return [[NSLocale preferredLanguages] objectAtIndex: 0];
+    
+    // TODO: Use [NSLocale preferredLanguages][0] (need to map ISO 639-1 to ISO 639-2).
+    return @"eng";
 }
 
 - (void)setShouldRenameSubtitles: (BOOL)value
