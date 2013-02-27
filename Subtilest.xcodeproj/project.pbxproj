@@ -19,6 +19,7 @@
 		C050CCA616D6CC9600946582 /* NSLocale+SUBLanguagesNames.m in Sources */ = {isa = PBXBuildFile; fileRef = C050CCA516D6CC9600946582 /* NSLocale+SUBLanguagesNames.m */; };
 		C052B43B16D6D2E60041112B /* SUBPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = C052B43A16D6D2E60041112B /* SUBPreferences.m */; };
 		C0D077AE16DE9B8C00C3AB46 /* iso639-2.json in Resources */ = {isa = PBXBuildFile; fileRef = C0D077AD16DE9B8C00C3AB46 /* iso639-2.json */; };
+		C0D077B016DEC1E500C3AB46 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = C0D077AF16DEC1E500C3AB46 /* Makefile */; };
 		C0D4D49C16DD02CA003BC8EB /* SUBSubtitleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D4D49B16DD02CA003BC8EB /* SUBSubtitleManager.m */; };
 		C0DE09DA16DD4FBF00FD2D3B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0DE09D916DD4FBF00FD2D3B /* Sparkle.framework */; };
 		C0DE09DC16DD4FF500FD2D3B /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0DE09D916DD4FBF00FD2D3B /* Sparkle.framework */; };
@@ -69,6 +70,7 @@
 		C052B43A16D6D2E60041112B /* SUBPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBPreferences.m; sourceTree = "<group>"; };
 		C05A8B1216DD4653004562C2 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		C0D077AD16DE9B8C00C3AB46 /* iso639-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "iso639-2.json"; sourceTree = "<group>"; };
+		C0D077AF16DEC1E500C3AB46 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = SOURCE_ROOT; };
 		C0D4D49A16DD02CA003BC8EB /* SUBSubtitleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBSubtitleManager.h; sourceTree = "<group>"; };
 		C0D4D49B16DD02CA003BC8EB /* SUBSubtitleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBSubtitleManager.m; sourceTree = "<group>"; };
 		C0DE09D916DD4FBF00FD2D3B /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
@@ -149,8 +151,9 @@
 		B68BAC52167A58A60071F34D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C05A8B1216DD4653004562C2 /* Podfile */,
 				B68BAC53167A58A60071F34D /* Subtilest-Info.plist */,
+				C05A8B1216DD4653004562C2 /* Podfile */,
+				C0D077AF16DEC1E500C3AB46 /* Makefile */,
 				B68BAC54167A58A60071F34D /* InfoPlist.strings */,
 				B68BAC57167A58A60071F34D /* main.m */,
 				B68BAC59167A58A60071F34D /* Subtilest-Prefix.pch */,
@@ -298,6 +301,7 @@
 				C050CCA616D6CC9600946582 /* NSLocale+SUBLanguagesNames.m in Sources */,
 				C052B43B16D6D2E60041112B /* SUBPreferences.m in Sources */,
 				C0D4D49C16DD02CA003BC8EB /* SUBSubtitleManager.m in Sources */,
+				C0D077B016DEC1E500C3AB46 /* Makefile in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
