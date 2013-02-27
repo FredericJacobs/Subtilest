@@ -41,16 +41,20 @@
             return;
         }
         
-        NSString *path = [self subtitlePathForMovieAtPath: moviePath];
+        NSString *path = [self subtitlePathForMovieAtPath: moviePath withSubtitle: subtitles[0]];
         [self.downloader downloadSubtitlesForResult: subtitles[0] toPath: path : ^(void) {
             NSLog(@"Done.");
         }];
     }];
 }
 
-- (NSString *)subtitlePathForMovieAtPath: (NSString *)moviePath
+- (NSString *)subtitlePathForMovieAtPath: (NSString *)moviePath withSubtitle: (OpenSubtitleSearchResult *)subtitle
 {
-    return [NSString stringWithFormat: @"%@.srt", [moviePath stringByDeletingPathExtension]];
+    if( [[SUBPreferences sharedInstance] shouldRenameSubtitles] ) {
+        return [NSString stringWithFormat: @"%@.srt", [moviePath stringByDeletingPathExtension]];
+    }
+    
+    return [NSString stringWithFormat: @"%@/%@.srt", [moviePath stringByDeletingLastPathComponent], subtitle.subtitleID];
 }
 
 - (void)debugState
