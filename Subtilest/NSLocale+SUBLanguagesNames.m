@@ -13,7 +13,7 @@
 + (NSDictionary *)ISO6392LanguageMap
 {
     NSError *error;
-    NSData *data = [NSData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"iso639-2" ofType: @"json"]];
+    NSData *data = [NSData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"Languages" ofType: @"json"]];
     NSDictionary *map = [NSJSONSerialization JSONObjectWithData: data options: 0 error: &error];
     
     // TODO: Check for errors
