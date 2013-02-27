@@ -25,7 +25,7 @@
 - (void)fetchSubtitleForMovieAtPath: (NSString *)moviePath
 {
     SUBVideoHash hash = [SUBHashAlgorithm hashForPath: moviePath];
-    NSString *hashString = [NSString stringWithFormat: @"%llu", hash.fileHash];
+    NSString *hashString = [NSString stringWithFormat: @"%0llx", hash.fileHash];
     NSNumber *fileSize = [NSNumber numberWithUnsignedLongLong: hash.fileSize];
 
     NSLog( @"File path: %@", moviePath );
