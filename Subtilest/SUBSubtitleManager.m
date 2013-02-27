@@ -29,19 +29,32 @@
 
     self.downloader.languageString = [[SUBPreferences sharedInstance] subtitlesLanguage];
     [self.downloader searchForSubtitlesWithHash: hashString andFilesize: fileSize: ^(NSArray *subtitles) {
-        NSLog( @"%@", subtitles );
-        
         for( OpenSubtitleSearchResult *subtitle in subtitles ) {
+            NSLog( @"--------------------------------------------------------------------------" );
             NSLog( @"ID:       %@", subtitle.subtitleID );
             NSLog( @"Language: %@", subtitle.subtitleLanguage );
             NSLog( @"ISO-639:  %@", subtitle.iso639Language );
             NSLog( @"Download: %@", subtitle.subtitleDownloadAddress );
-            NSLog( @"-----------------------------" );
         }
+        
+        if( !subtitles.count ) {
+            return;
+        }
+        
+        NSString *path = [self subtitlePathForMovieAtPath: moviePath];
+        [self.downloader downloadSubtitlesForResult: subtitles[0] toPath: path : ^(void) {
+            NSLog(@"Done.");
+        }];
     }];
 }
 
--(void)debugState
+- (NSString *)subtitlePathForMovieAtPath: (NSString *)moviePath
+{
+    NSLog(@"Path: %@", [NSString stringWithFormat: @"%@.srt", [moviePath stringByDeletingPathExtension]] );
+    return [NSString stringWithFormat: @"%@.srt", [moviePath stringByDeletingPathExtension]];
+}
+
+- (void)debugState
 {
     switch( self.downloader.state ) {
         case OROpenSubtitleStateLoggingIn:
