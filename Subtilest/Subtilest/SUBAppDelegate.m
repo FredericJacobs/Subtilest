@@ -16,7 +16,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    OROpenSubtitleDownloader *downloader = [[OROpenSubtitleDownloader alloc] initWithUserAgent: @"OS Test User Agent"];
+    OROpenSubtitleDownloader *downloader = [[OROpenSubtitleDownloader alloc] init];
     downloader.delegate = self;
     
     self.dropView.callback = ^( NSURL *url ) {
