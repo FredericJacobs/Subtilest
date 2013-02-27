@@ -23,6 +23,16 @@ static NSString * const kRenameSubtitlesKey = @"Rename Subtitles";
     return sharedInstance;
 }
 
++ (void)registerDefaults
+{
+    NSDictionary *defaults = @{
+        kSubtitlesLanguageKey: @"eng",
+        kRenameSubtitlesKey: @YES
+    };
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults: defaults];
+}
+
 - (id)init
 {
     self = [super init];
@@ -38,14 +48,9 @@ static NSString * const kRenameSubtitlesKey = @"Rename Subtitles";
 
 - (NSString *)subtitlesLanguage
 {
-    NSString * selectedLanguage = [self.userDefaults stringForKey: kSubtitlesLanguageKey];
-
-    if( selectedLanguage ) {
-        return selectedLanguage;
-    }
+    return [self.userDefaults stringForKey: kSubtitlesLanguageKey];
     
     // TODO: Use [NSLocale preferredLanguages][0] (need to map ISO 639-1 to ISO 639-2).
-    return @"eng";
 }
 
 - (void)setShouldRenameSubtitles: (BOOL)value

@@ -24,13 +24,16 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-
+    
+    SUBPreferences *prefs = [SUBPreferences sharedInstance];
+    
     [self.languageSelector removeAllItems];
     [self.languageSelector addItemsWithTitles: [[NSLocale ISO6392LanguageNames] sortedArrayUsingSelector: @selector(localizedCaseInsensitiveCompare:)]];
 
-    NSString *selectedLanguage = [[SUBPreferences sharedInstance] subtitlesLanguage];
-    NSLog(@"%@", selectedLanguage);
+    NSString *selectedLanguage = [prefs subtitlesLanguage];
     [self.languageSelector selectItemWithTitle: [NSLocale ISO6392LanguageMap][selectedLanguage]];
+    
+    self.renameSubtitlesCheckbox.state = [prefs shouldRenameSubtitles] ? NSOnState : NSOffState;
 }
 
 - (IBAction)languageDidChange: (id)sender

@@ -13,6 +13,7 @@
 @property (weak) NSUserDefaults *userDefaults;
 
 + (id)sharedInstance;
++ (void)registerDefaults;
 - (void)setSubtitlesLanguage: (NSString *)languageISOCode;
 - (NSString *)subtitlesLanguage;
 - (void)setShouldRenameSubtitles: (BOOL)value;

@@ -16,6 +16,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    [SUBPreferences registerDefaults];
     OROpenSubtitleDownloader *downloader = [[OROpenSubtitleDownloader alloc] init];
     downloader.delegate = self;
 
