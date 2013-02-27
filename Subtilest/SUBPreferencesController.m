@@ -7,7 +7,7 @@
 //
 
 #import "SUBPreferencesController.h"
-#import "NSLocale+SUBLanguagesNames.h"
+#import "SUBLanguages.h"
 #import "SUBPreferences.h"
 
 
@@ -28,17 +28,17 @@
     SUBPreferences *prefs = [SUBPreferences sharedInstance];
     
     [self.languageSelector removeAllItems];
-    [self.languageSelector addItemsWithTitles: [[NSLocale ISO6392LanguageNames] sortedArrayUsingSelector: @selector(localizedCaseInsensitiveCompare:)]];
+    [self.languageSelector addItemsWithTitles: [[SUBLanguages languageNames] sortedArrayUsingSelector: @selector(localizedCaseInsensitiveCompare:)]];
 
     NSString *selectedLanguage = [prefs subtitlesLanguage];
-    [self.languageSelector selectItemWithTitle: [NSLocale ISO6392LanguageMap][selectedLanguage]];
+    [self.languageSelector selectItemWithTitle: [SUBLanguages languageMap][selectedLanguage]];
     
     self.renameSubtitlesCheckbox.state = [prefs shouldRenameSubtitles] ? NSOnState : NSOffState;
 }
 
 - (IBAction)languageDidChange: (id)sender
 {
-    NSString * selectedLanguageISOCode = [[NSLocale ISO6392LanguageMap] allKeysForObject: self.languageSelector.selectedItem.title][0];
+    NSString * selectedLanguageISOCode = [[SUBLanguages languageMap] allKeysForObject: self.languageSelector.selectedItem.title][0];
     [[SUBPreferences sharedInstance] setSubtitlesLanguage: selectedLanguageISOCode];
 }
 

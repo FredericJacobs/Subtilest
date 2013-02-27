@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSLocale (SUBLocalizedLanguagesNames)
+@interface SUBLanguages
 
-+ (NSDictionary *)ISO6392LanguageMap;
-+ (NSArray *)ISO6392LanguageCodes;
-+ (NSArray *)ISO6392LanguageNames;
++ (NSDictionary *)languageMap;
++ (NSArray *)languageCodes;
++ (NSArray *)languageNames;
 
 @end

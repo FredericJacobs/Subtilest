@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Frederic Jacobs. All rights reserved.
 //
 
-#import "NSLocale+SUBLanguagesNames.h"
+#import "SUBLanguages.h"
 
-@implementation NSLocale (SUBLocalizedLanguagesNames)
+@implementation SUBLanguages
 
-+ (NSDictionary *)ISO6392LanguageMap
++ (NSDictionary *)languageMap
 {
     NSError *error;
     NSData *data = [NSData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"Languages" ofType: @"json"]];
@@ -22,14 +22,14 @@
     return map;
 }
 
-+ (NSArray *)ISO6392LanguageCodes
++ (NSArray *)languageCodes
 {
-    return [[NSLocale ISO6392LanguageMap] allKeys];
+    return [[SUBLanguages languageMap] allKeys];
 }
 
-+ (NSArray *)ISO6392LanguageNames
++ (NSArray *)languageNames
 {
-    return [[NSLocale ISO6392LanguageMap] allValues];
+    return [[SUBLanguages languageMap] allValues];
 
 }
 
