@@ -18,6 +18,7 @@
 {
     OROpenSubtitleDownloader *downloader = [[OROpenSubtitleDownloader alloc] init];
     downloader.delegate = self;
+    downloader.languageString = [[SUBPreferences sharedInstance] subtitlesLanguage];
 
     self.dropView.callback = ^( NSURL *url ) {
         [self fetchSubtitlesForFileAtPath: url.path];
