@@ -1,0 +1,28 @@
+From 4caa441aa9d3618523975dedf4de15451591939a Mon Sep 17 00:00:00 2001
+From: Frederic Jacobs <frederic.jacobs@mac.com>
+Date: Wed, 27 Feb 2013 20:18:06 +0100
+Subject: [PATCH] Fixing threading issue
+
+---
+ XMLRPCConnection.m |    5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/XMLRPCConnection.m b/XMLRPCConnection.m
+index 1c5fc40..b57518d 100644
+--- a/XMLRPCConnection.m
++++ b/XMLRPCConnection.m
+@@ -55,7 +55,10 @@ - (id)initWithXMLRPCRequest: (XMLRPCRequest *)request delegate: (id<XMLRPCConnec
+ #endif
+         myData = [[NSMutableData alloc] init];
+         
+-        myConnection = [[NSURLConnection alloc] initWithRequest: [request request] delegate: self];
++        myConnection = [[NSURLConnection alloc] initWithRequest: [request request] delegate: self startImmediately:NO];
++        [myConnection scheduleInRunLoop:[NSRunLoop mainRunLoop]
++                                forMode:NSDefaultRunLoopMode];
++        [myConnection start];
+         
+ #if ! __has_feature(objc_arc)
+         myDelegate = [delegate retain];
+-- 
+1.7.10
+
