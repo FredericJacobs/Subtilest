@@ -36,7 +36,7 @@
             NSLog( @"ISO-639:  %@", subtitle.iso639Language );
             NSLog( @"Download: %@", subtitle.subtitleDownloadAddress );
         }
-        
+
         if( !subtitles.count ) {
             return;
         }
@@ -50,7 +50,6 @@
 
 - (NSString *)subtitlePathForMovieAtPath: (NSString *)moviePath
 {
-    NSLog(@"Path: %@", [NSString stringWithFormat: @"%@.srt", [moviePath stringByDeletingPathExtension]] );
     return [NSString stringWithFormat: @"%@.srt", [moviePath stringByDeletingPathExtension]];
 }
 
