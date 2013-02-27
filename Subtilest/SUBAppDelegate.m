@@ -18,7 +18,7 @@
 {
     OROpenSubtitleDownloader *downloader = [[OROpenSubtitleDownloader alloc] init];
     downloader.delegate = self;
-    
+
     self.dropView.callback = ^( NSURL *url ) {
         [self fetchSubtitlesForFileAtPath: url.path];
     };
@@ -33,7 +33,7 @@
 - (BOOL)application: (NSApplication *)theApplication openFile: (NSString *)filePath
 {
     [self fetchSubtitlesForFileAtPath: filePath];
-    
+
     return TRUE;
 }
 

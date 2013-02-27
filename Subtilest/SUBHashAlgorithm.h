@@ -15,7 +15,7 @@ typedef struct
 } SUBVideoHash;
 
 @interface SUBHashAlgorithm : NSObject {
-    
+
 }
 +(SUBVideoHash)hashForPath:(NSString*)path;
 +(SUBVideoHash)hashForURL:(NSURL*)url;

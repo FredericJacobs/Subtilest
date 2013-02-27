@@ -16,7 +16,7 @@
     if( self = [super init] ) {
         self.downloader = downloader;
     }
-    
+
     [self debugState];
 
     return self;

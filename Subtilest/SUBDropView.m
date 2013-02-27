@@ -41,7 +41,7 @@
     if( [pboard.types containsObject: NSURLPboardType] ) {
         if( self.callback ) {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
-               self.callback([NSURL URLFromPasteboard: pboard]); 
+               self.callback([NSURL URLFromPasteboard: pboard]);
             });
         }
     }
