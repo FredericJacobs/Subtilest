@@ -27,7 +27,7 @@
 
 - (void)openSubtitlerDidLogIn:(OROpenSubtitleDownloader *)downloader
 {
-    NSLog( @"OROpenSubtitleDownloader did log in." );
+    // NSLog( @"OROpenSubtitleDownloader did log in." );
     self.subtitleManager = [[SUBSubtitleManager alloc] initWithDownloader: downloader];
 }
 
