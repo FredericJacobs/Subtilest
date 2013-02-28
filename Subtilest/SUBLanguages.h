@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SUBLanguages
+@interface SUBLanguages : NSObject
 
 + (NSDictionary *)languageMap;
 + (NSArray *)languageCodes;
