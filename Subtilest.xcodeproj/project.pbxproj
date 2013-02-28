@@ -19,7 +19,6 @@
 		C050CCA616D6CC9600946582 /* SUBLanguages.m in Sources */ = {isa = PBXBuildFile; fileRef = C050CCA516D6CC9600946582 /* SUBLanguages.m */; };
 		C052B43B16D6D2E60041112B /* SUBPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = C052B43A16D6D2E60041112B /* SUBPreferences.m */; };
 		C0D077AE16DE9B8C00C3AB46 /* Languages.json in Resources */ = {isa = PBXBuildFile; fileRef = C0D077AD16DE9B8C00C3AB46 /* Languages.json */; };
-		C0D077B016DEC1E500C3AB46 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = C0D077AF16DEC1E500C3AB46 /* Makefile */; };
 		C0D4D49C16DD02CA003BC8EB /* SUBSubtitleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D4D49B16DD02CA003BC8EB /* SUBSubtitleManager.m */; };
 		C0DE09DA16DD4FBF00FD2D3B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0DE09D916DD4FBF00FD2D3B /* Sparkle.framework */; };
 		C0DE09DC16DD4FF500FD2D3B /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0DE09D916DD4FBF00FD2D3B /* Sparkle.framework */; };
@@ -293,7 +292,6 @@
 				C050CCA616D6CC9600946582 /* SUBLanguages.m in Sources */,
 				C052B43B16D6D2E60041112B /* SUBPreferences.m in Sources */,
 				C0D4D49C16DD02CA003BC8EB /* SUBSubtitleManager.m in Sources */,
-				C0D077B016DEC1E500C3AB46 /* Makefile in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +392,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Subtilest/Subtilest-Prefix.pch";
 				INFOPLIST_FILE = "Subtilest/Subtilest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -413,7 +413,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Subtilest/Subtilest-Prefix.pch";
 				INFOPLIST_FILE = "Subtilest/Subtilest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
