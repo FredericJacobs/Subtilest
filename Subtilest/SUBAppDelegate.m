@@ -40,8 +40,11 @@
 
 - (void)fetchSubtitlesForFileAtPath: (NSString *)filePath
 {
+    self.statusField.stringValue = @"Downloading…";
     self.subtitleManager.renameSubtitleFile = [[SUBPreferences sharedInstance] shouldRenameSubtitles];
-    [self.subtitleManager fetchSubtitleForMovieAtPath: filePath];
+    [self.subtitleManager fetchSubtitleForMovieAtPath: filePath withCallback: ^() {
+        self.statusField.stringValue = @"Done.";
+    }];
 }
 
 - (IBAction)showPreferences:(id)sender

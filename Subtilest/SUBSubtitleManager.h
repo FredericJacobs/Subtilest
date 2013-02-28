@@ -12,10 +12,12 @@
 
 @interface SUBSubtitleManager : NSObject
 
+typedef void (^SUBManagerFetchCallback)(void);
+
 @property (strong) OROpenSubtitleDownloader *downloader;
 @property BOOL renameSubtitleFile;
 
 - (SUBSubtitleManager *)initWithDownloader: (OROpenSubtitleDownloader *) downloader;
-- (void)fetchSubtitleForMovieAtPath: (NSString *)moviePath;
+- (void)fetchSubtitleForMovieAtPath: (NSString *)moviePath withCallback: (SUBManagerFetchCallback)callback;
 
 @end

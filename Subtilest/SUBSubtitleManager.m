@@ -21,7 +21,7 @@
     return self;
 }
 
-- (void)fetchSubtitleForMovieAtPath: (NSString *)moviePath
+- (void)fetchSubtitleForMovieAtPath: (NSString *)moviePath withCallback: (SUBManagerFetchCallback)callback
 {
     SUBVideoHash hash = [SUBHashAlgorithm hashForPath: moviePath];
     NSString *hashString = [NSString stringWithFormat: @"%0llx", hash.fileHash];
@@ -43,7 +43,8 @@
         
         NSString *path = [self subtitlePathForMovieAtPath: moviePath withSubtitle: subtitles[0]];
         [self.downloader downloadSubtitlesForResult: subtitles[0] toPath: path : ^(void) {
-            NSLog(@"Done.");
+            NSLog( @"Done." );
+            dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0 ), callback );
         }];
     }];
 }

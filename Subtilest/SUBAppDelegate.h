@@ -17,6 +17,7 @@
 
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet SUBMovieDropView *dropView;
+@property (weak) IBOutlet NSTextField *statusField;
 @property (strong) IBOutlet SUBPreferencesController *preferencesController;
 @property (strong) SUBSubtitleManager *subtitleManager;
 
